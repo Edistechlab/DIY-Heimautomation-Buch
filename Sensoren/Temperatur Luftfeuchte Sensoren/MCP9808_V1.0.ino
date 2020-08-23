@@ -27,24 +27,24 @@ ALERT       input Pin   input Pin   input Pin   input Pin
 #include "Adafruit_MCP9808.h"
 
 float temp = 0.00;
-Adafruit_MCP9808 tempsensor = Adafruit_MCP9808();
+Adafruit_MCP9808 sensor = Adafruit_MCP9808();
 
 void setup() {
   Serial.begin(115200);
-  if (!tempsensor.begin(0x18)) {
+  if (!sensor.begin(0x18)) {
     Serial.println("MCP9808 Sensor nicht gefunden, überprüfe die Adresse oder Verkabelung!");
     while (true);
   }
-  tempsensor.setResolution(3);  // 0.0625°C    250 ms
+  sensor.setResolution(3);  // 0.0625°C    250 ms
 }
 
 void loop() {
-  tempsensor.wake();   // wake up the Sensor
-  temp = tempsensor.readTempC();
+  sensor.wake();   // wake up the Sensor
+  temp = sensor.readTempC();
   Serial.print("Temperature: ");
   Serial.print( String(temp));
   Serial.println("°C");
   delay(2000);
-  tempsensor.shutdown_wake(1); // shutdown the sensor; power consumption ~0.1 mikro Ampere
+  sensor.shutdown_wake(1); // shutdown the sensor; power consumption ~0.1 mikro Ampere
   delay(200);
 }
