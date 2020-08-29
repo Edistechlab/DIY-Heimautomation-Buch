@@ -17,8 +17,8 @@ Wirering for the Si7020 Sensor:
 Si7021      ESP32     ESP8266     UNO       Mega
 VCC         3.3V      3.3V        3.3V      3.3V      
 GND         GND       GND         GND       GND
-SCL         D1/5      22          A5        21
-SDA         D2/4      21          A4        20
+SCL         22        D1/5        A5        21
+SDA         21        D2/4        A4        20
 */
 
 #include "Adafruit_Si7021.h"
