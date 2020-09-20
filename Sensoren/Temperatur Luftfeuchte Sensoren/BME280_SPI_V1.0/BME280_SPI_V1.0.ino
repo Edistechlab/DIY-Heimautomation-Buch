@@ -23,9 +23,10 @@ SDO         D31/19      D6/12       12          51
 */
 
 #include <Adafruit_BME280.h>
+//NodeMCU ESP32
 #define BME_SCK 18   // Serial Clock 
 #define BME_MOSI 23  // Serial Data In 
-#define BME_CS 5    // Chip Select 
+#define BME_CS 5     // Chip Select 
 #define BME_MISO 19  // Serial Data Out 
 Adafruit_BME280 bme(BME_CS, BME_MOSI, BME_MISO, BME_SCK); // software SPI
 
