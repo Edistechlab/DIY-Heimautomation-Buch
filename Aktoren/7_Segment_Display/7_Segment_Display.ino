@@ -48,7 +48,7 @@ void setup(){
 void loop(){ 
    // Zahlen von 0-9 
    for(int i = 0; i < 10; i++){
-     (sevseg.setNumber(i, 0));  //zweite Stelle ist der DP, 0=EIN  1=AUS
+     sevseg.setNumber(i, 0);  //zweite Stelle ist der DP, 0=EIN  1=AUS
      sevseg.refreshDisplay(); 
      delay(1000);
    }
