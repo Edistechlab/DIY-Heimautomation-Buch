@@ -1,5 +1,5 @@
 /*
-Project:  RFID Access with ESP8266 / ESP32
+Project:  RFID Access with ESP8266 / ESP32 und Arduinos
 Author:   Thomas Edlinger for www.edistechlab.com
 Date:     Created 21.05.2020 
 Version:  V1.0
