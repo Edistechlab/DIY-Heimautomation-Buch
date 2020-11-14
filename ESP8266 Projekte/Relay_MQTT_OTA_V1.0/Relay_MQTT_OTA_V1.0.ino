@@ -9,7 +9,7 @@ Required Board (Tools -> Board -> Boards Manager...)
  - Board: esp8266 by ESP8266 Community   V2.7.4 
 
 Required libraries (Tools -> manage libraries)
- - PubSubClient by Nick ‘O Leary V2.0.8
+ - PubSubClient by Nick ‘O Leary V2.8.0
  - ArduinoOTA by Juraj Andrassy V1.0.5
 
 Wirering for the Output:
