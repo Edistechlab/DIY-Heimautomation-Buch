@@ -33,12 +33,10 @@ void setup() {
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C); // I2C address = 0x3C
   delay(1000);
   display.clearDisplay();
-display.setTextSize(1);
-display.setTextColor(WHITE);
-display.setCursor(0, 0);
-display.print("Edi");
-
-  
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0, 0);
+  display.print("Edi's Techlab");
   display.display(); 
 }
 
