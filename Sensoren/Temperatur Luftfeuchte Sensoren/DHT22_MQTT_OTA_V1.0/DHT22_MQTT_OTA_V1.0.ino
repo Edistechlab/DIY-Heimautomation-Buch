@@ -12,7 +12,7 @@ Required Board (Tools -> Board -> Boards Manager...)
 Required libraries (sketch -> include library -> manage libraries)
  - Adafruit_DHT sensor library V1.3.10 
  - Adafruit Unified Sensor Library V1.1.4
- - PubSubClient by Nick ‘O Leary V2.0.8
+ - PubSubClient by Nick ‘O Leary V2.8.0
  - ArduinoOTA by Juraj Andrassy V1.0.5
  
 Wirering for the DHT22 Sensor:
