@@ -11,7 +11,7 @@ Required Board (Tools -> Board -> Boards Manager...)
 
 Required libraries (sketch -> include library -> manage libraries)
  - Adafruit_MCP9808 library V1.1.2 
- - PubSubClient by Nick ‘O Leary V2.0.8
+ - PubSubClient by Nick ‘O Leary V2.8.0
  - ArduinoOTA by Juraj Andrassy V1.0.5
 
 Wirering for the MCP9808 Sensor:
