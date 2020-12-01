@@ -11,7 +11,7 @@ Required Board (Tools -> Board -> Boards Manager...)
 
 Required libraries (sketch -> include library -> manage libraries)
  - Adafruit BME280 library V2.1.0 
- - PubSubClient by Nick ‘O Leary V2.0.8
+ - PubSubClient by Nick ‘O Leary V2.8.0
  - ArduinoOTA by Juraj Andrassy V1.0.5
  
 Wirering for the BME280 Sensor:
