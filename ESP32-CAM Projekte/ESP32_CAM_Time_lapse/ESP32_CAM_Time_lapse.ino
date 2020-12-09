@@ -10,7 +10,6 @@ Required Board (Tools -> Board -> Boards Manager...)
 */
 
 #include "esp_camera.h"
-#include "FS.h"
 #include "SD_MMC.h"
 #include "EEPROM.h"
 #include "driver/rtc_io.h"
