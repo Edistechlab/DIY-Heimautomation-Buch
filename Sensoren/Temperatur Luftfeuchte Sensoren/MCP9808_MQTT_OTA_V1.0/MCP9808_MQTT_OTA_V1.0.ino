@@ -7,7 +7,7 @@ IDE:      Arduino IDE 1.8.13
  
 Required Board (Tools -> Board -> Boards Manager...)
  - Board: esp8266 by ESP8266 Community   V2.7.4 
- - Board: esp32   by Espressif Systems   V1.0.2
+ - Board: esp32   by Espressif Systems   V1.0.4
 
 Required libraries (sketch -> include library -> manage libraries)
  - Adafruit_MCP9808 library V1.1.2 
@@ -29,6 +29,7 @@ ALERT       input Pin   input Pin   input Pin   input Pin
 #include "Adafruit_MCP9808.h"
 #include <PubSubClient.h>
 #include <ArduinoOTA.h>
+//#include <WiFi.h>         // Wird nur beim ESP32 benötigt, beim ESP8266 auskommentieren
 
 #define wifi_ssid "Your_SSID"
 #define wifi_password "Your_Password"
