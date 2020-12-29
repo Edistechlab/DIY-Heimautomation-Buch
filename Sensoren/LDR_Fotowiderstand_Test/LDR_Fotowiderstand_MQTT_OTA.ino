@@ -7,6 +7,7 @@ IDE:      Arduino IDE 1.8.13
  
 Required Board (Tools -> Board -> Boards Manager...)
  - Board: esp8266 by ESP8266 Community   V2.7.4 
+ - Board: esp32   by Espressif Systems   V1.0.4
 
 Required libraries (sketch -> include library -> manage libraries)
  - PubSubClient by Nick ‘O Leary V2.8.0
@@ -15,6 +16,7 @@ Required libraries (sketch -> include library -> manage libraries)
 
 #include <PubSubClient.h>
 #include <ArduinoOTA.h>
+//#include <WiFi.h>         // Wird nur beim ESP32 benötigt, beim ESP8266 auskommentieren
 
 #define wifi_ssid "Your_SSID"
 #define wifi_password "Your_Password"
