@@ -7,7 +7,7 @@ IDE:      Arduino IDE 1.8.13
  
 Required Board (Tools -> Board -> Boards Manager...)
  - Board: esp8266 by ESP8266 Community   V2.7.4 
- - Board: esp32   by Espressif Systems   V1.0.2
+ - Board: esp32   by Espressif Systems   V1.0.4
 
 Required libraries (sketch -> include library -> manage libraries)
  - Adafruit_DHT sensor library V1.3.10 
@@ -27,6 +27,7 @@ OUT         22          D1/5        A5          21
 #include <PubSubClient.h>
 #include <ArduinoOTA.h>
 #include <Adafruit_Sensor.h>
+//#include <WiFi.h>         // Wird nur beim ESP32 benötigt, beim ESP8266 auskommentieren
 
 #define wifi_ssid "Your_SSID"
 #define wifi_password "Your_Password"
