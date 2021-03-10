@@ -1,7 +1,7 @@
 # DIY-Heimautomation-Buch und YouTube Videos
-Begleitcode Sammlung für das Buch.
+Begleitcode Sammlung für die Bücher von Edi's Techlab.
 
-Optimales Raumklima:  https://www.amazon.de/dp/B08H1DBYVH
+https://edistechlab.com/e-book-shop/
 
 In diesem Repository findet ihr alle Codes die im Buch DIY-Heimautomation von 
 Edi's Techlab und im YouTube vorgestellt werden zum downloaden.
