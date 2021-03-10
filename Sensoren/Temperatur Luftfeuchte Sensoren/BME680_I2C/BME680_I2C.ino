@@ -30,7 +30,7 @@ float gas = 0.00;
 
 void setup() {
   Serial.begin(115200);
-  if (!bme.begin()) {
+  if (!bme.begin(0x77, &Wire)) {  //I2C Adresse ist 0x76 oder 0x77
     Serial.println("BME680 Sensor nicht gefunden, überprüfe die Verkabelung oder Adresse!");
     while (true);
   }
