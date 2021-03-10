@@ -17,7 +17,6 @@ OUT         D1 / GPIO5
  
 int motionPin = 5;
 int pirState = LOW;
-int motion = 0;
  
 void setup() {
   pinMode(motionPin, INPUT);     
@@ -25,8 +24,7 @@ void setup() {
 }
  
 void loop(){
-  motion = digitalRead(motionPin);
-  if (motion == HIGH) {
+  if (digitalRead(motionPin) == HIGH) {
     if (pirState == LOW) {
       Serial.println("Bewegung erkannt");
       pirState = HIGH;
