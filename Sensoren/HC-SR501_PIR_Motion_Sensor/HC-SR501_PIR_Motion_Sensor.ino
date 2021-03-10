@@ -1,5 +1,5 @@
 /*
-Project:  PIR Motion dedector HC-SR501 with an ESP8266/NodeMCU
+Project:  PIR Motion dedector HC-SR501 / ESP8266/NodeMCU
 Author:   Thomas Edlinger for www.edistechlab.com
 Date:     Created 10.03.2021 
 Version:  V1.0
