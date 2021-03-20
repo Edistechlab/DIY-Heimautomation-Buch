@@ -9,8 +9,8 @@ Version:  V1.0
 
 Servo myservo;    //Servo Objekt erstellen
 
-int servoPin = 2; //Pin 9 Uno; Pin 2(D4) Node MCU ESP8266
-int potpin = 0;   //Analog pin A0 für das Potenziometer
+const int servoPin = 2; //Pin 9 Uno; Pin 2(D4) Node MCU ESP8266
+const int potpin = 0;   //Analog pin A0 für das Potenziometer
 int val;
 
 void setup() {
