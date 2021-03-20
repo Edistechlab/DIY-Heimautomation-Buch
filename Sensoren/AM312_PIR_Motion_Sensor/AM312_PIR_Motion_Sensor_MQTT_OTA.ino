@@ -38,7 +38,7 @@ String clientId = "AM312_Sensor-";
 WiFiClient espClient;  
 PubSubClient client(espClient);  
 
-int motionPin = 5;
+const int motionPin = 5;
 int pirState = LOW;
  
 void setup() {
