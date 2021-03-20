@@ -9,8 +9,8 @@ Version:  V1.0
 
 Servo myservo;//Servo Objekt erstellen
 
-int servoPin = 32;  // GPIO pin 32 für den Servomotor
-int potPin = 33;    // ADC PIN 33 für Potenziometer
+const int servoPin = 32;  // GPIO pin 32 für den Servomotor
+const int potPin = 33;    // ADC PIN 33 für Potenziometer
 int val;
 
 void setup(){
