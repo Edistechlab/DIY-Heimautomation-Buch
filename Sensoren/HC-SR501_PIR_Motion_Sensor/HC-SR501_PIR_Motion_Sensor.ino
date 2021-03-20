@@ -15,7 +15,7 @@ GND         GND
 OUT         D1 / GPIO5
 */
  
-int motionPin = 5;
+const int motionPin = 5;
 int pirState = LOW;
  
 void setup() {
