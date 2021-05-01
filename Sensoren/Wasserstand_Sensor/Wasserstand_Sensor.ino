@@ -18,7 +18,7 @@ AO          VP/A0/36    A0          A0          A0
 
 const int waterAnalogPin = A0;
 const int waterSensorPowerPin = 4;
-// Kalibrationswerte übertragen
+// Kalibrationswerte übertragen - hier mit dem ESP8266
 const int waterLevelLow = 50;
 const int waterLevelMiddle = 280;
 const int waterLevelHigh = 330;
