@@ -17,8 +17,8 @@ A           VP/A0/36    A0          A0          A0
 */
 
 const int soilMoistPin = A0;
-const int soilMoistLevelLow = 844;    //Dieser Wert soll von euch entsprechend angepasst werden
-const int soilMoistLevelHigh = 377;   //Dieser Wert soll von euch entsprechend angepasst werden
+const int soilMoistLevelLow = 832;    //Dieser Wert soll von euch entsprechend angepasst werden
+const int soilMoistLevelHigh = 382;   //Dieser Wert soll von euch entsprechend angepasst werden
 
 void setup() {
   Serial.begin(115200);  
