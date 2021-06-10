@@ -58,6 +58,10 @@ void loop() {
   Serial.print("Diesen Wert bei soilMoistLevelHigh eintragen: ");
   Serial.println(mittelwertHigh);
   Serial.println(" ");
+  mittelwertLow = 0;
+  mittelwertHigh = 0;
+  summeAnalogLow = 0;
+  summeAnalogHigh =0;
   delay(20000); 
   Serial.println("erneute Messung ");
   counter();
