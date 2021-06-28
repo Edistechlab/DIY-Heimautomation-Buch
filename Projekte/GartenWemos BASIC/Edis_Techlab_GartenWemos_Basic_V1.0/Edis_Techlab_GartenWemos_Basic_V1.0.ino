@@ -1,5 +1,5 @@
 /*
-Project:  Edis Techlab Garduino Basic
+Project:  Edis Techlab Garten-Wemos Basic
 Author:   Thomas Edlinger for www.edistechlab.com
 Date:     Created 22.05.2021
 Version:  V1.0
