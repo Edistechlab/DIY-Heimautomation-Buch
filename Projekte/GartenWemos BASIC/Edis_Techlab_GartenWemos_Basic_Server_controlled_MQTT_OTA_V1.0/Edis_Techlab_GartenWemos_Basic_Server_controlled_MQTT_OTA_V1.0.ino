@@ -1,5 +1,5 @@
 /*
-Project:  Edis Techlab Garduino Basic with MQTT controlled from a Server
+Project:  Edis Techlab Garten-Wemos Basic with MQTT controlled from a Server
 Author:   Thomas Edlinger for www.edistechlab.com
 Date:     Created 20.06.2021
 Version:  V1.0
