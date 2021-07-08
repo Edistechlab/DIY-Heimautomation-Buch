@@ -20,6 +20,7 @@ void setup(){
   pinMode(A, OUTPUT); 
   pinMode(B, OUTPUT); 
   pinMode(C, OUTPUT); 
+  pinMode(Z, INPUT); 
   digitalWrite(A, LOW);
   digitalWrite(B, LOW);
   digitalWrite(C, LOW);
