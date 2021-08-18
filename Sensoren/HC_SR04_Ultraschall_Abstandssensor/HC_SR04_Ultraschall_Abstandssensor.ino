@@ -22,7 +22,7 @@ GND         GND         GND         GND      GND
 Use a voltage divider for the Echo Pin on the ESPs. 
 1 kOhm and 2 kOhm for example
 
-HC-SR04-Echo---1kOhm---2kOHm---GND
+HC-SR04-Echo---1kOhm---2.2kOHm---GND
                      |
                      |
                    GPIO5
