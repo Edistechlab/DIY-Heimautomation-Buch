@@ -14,8 +14,8 @@ Required libraries (Tools -> manage libraries)
  - ArduinoOTA by Juraj Andrassy V1.0.5
 
 Wirering for the Output:
-LED     GPIO5 / D1
-Switch  GPIO4 / D2
+Switch  GPIO5 / D1
+LED     GPIO4 / D2
 */ 
 
 #include <PubSubClient.h>
@@ -35,8 +35,8 @@ String clientId = "ESP8266-";
 WiFiClient espClient;  
 PubSubClient client(espClient);  
 
-const int LEDPin = 5;     // der Output Pin wo das LED angehängt ist
-const int buttonPin = 4;  // der Input Pin wo der Taster angehängt ist
+const int LEDPin = 4;     // der Output Pin wo das LED angehängt ist
+const int buttonPin = 5;  // der Input Pin wo der Taster angehängt ist
 int buttonState = 0;
 int lastButtonState = 0;
     
