@@ -102,13 +102,13 @@ void callback(char* topic, byte* message, unsigned int length) {
   if (String(topic) == led_topic) {
     if(messageTemp == "ON"){
       Serial.print("Changing LED to ON\n");
-      digitalWrite(ledPin, HIGH);   //Invertiertes Signal
+      digitalWrite(ledPin, HIGH);
       client.publish(ledStatus_topic, "ON");
       delay(200);
     }
     else if(messageTemp == "OFF"){
       Serial.print("Changing LED to OFF\n");
-      digitalWrite(ledPin, LOW);  //Invertiertes Signal
+      digitalWrite(ledPin, LOW);
       client.publish(ledStatus_topic, "OFF"); 
       delay(200);
     }
