@@ -63,13 +63,13 @@ void loop(){
   if (digitalRead(motionPin) == HIGH) {
     if (pirState == LOW) {
       Serial.println("Bewegung erkannt");
-      client.publish(outTopic, "HIGH");
+      client.publish(outTopic, "ON");
       pirState = HIGH;
     }
   } else {
     if (pirState == HIGH){
       Serial.println("Keine Bewegung");
-      client.publish(outTopic, "LOW");
+      client.publish(outTopic, "OFF");
       pirState = LOW;
     }
   }
