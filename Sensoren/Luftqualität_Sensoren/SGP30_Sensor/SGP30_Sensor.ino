@@ -30,7 +30,7 @@ void setup() {
   Serial.begin(115200);
 
   if (! sgp.begin()){
-    Serial.println("Sensor not found :(");
+    Serial.println("Sensor not found :-(");
     while (1);
   }
   //Hier können die Baseline Werte wenn vorhanden eingegeben werden, wenn nicht, diese Zeile auskommentierern
