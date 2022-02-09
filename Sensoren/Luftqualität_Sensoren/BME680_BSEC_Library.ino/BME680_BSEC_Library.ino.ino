@@ -40,8 +40,9 @@ void loop() {
     Serial.print("IAQ-Ac: "); Serial.print(bme680.iaqAccuracy); Serial.print("\t");
     Serial.print("CO2: "); Serial.print(bme680.co2Equivalent); Serial.print("\t");
     Serial.print("VOC: "); Serial.println(bme680.breathVocEquivalent);
-  } else if (bme680.bme680Status != BME680_OK) {
+  }
+  else if (bme680.bme680Status != BME680_OK) {
       Serial.println("Sensor not found :-(");
       delay(1000);
-    }
+  }
 }
