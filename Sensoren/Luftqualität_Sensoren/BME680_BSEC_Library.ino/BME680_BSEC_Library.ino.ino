@@ -35,7 +35,7 @@ void loop() {
   if (bme680.run()) { 
     Serial.print("Temp: "); Serial.print(bme680.temperature); Serial.print(" C\t");
     Serial.print("Hum: "); Serial.print(bme680.humidity); Serial.print(" %\t");
-    Serial.print("Druck: "); Serial.print(bme680.pressure); Serial.print(" hPa\t");
+    Serial.print("Druck: "); Serial.print(bme680.pressure); Serial.print(" Pa\t");
     Serial.print("IAQ: "); Serial.print(bme680.iaq); Serial.print("\t");
     Serial.print("IAQ-Ac: "); Serial.print(bme680.iaqAccuracy); Serial.print("\t");
     Serial.print("CO2: "); Serial.print(bme680.co2Equivalent); Serial.print("\t");
