@@ -24,7 +24,6 @@ void loop() {
     doc["ledRot"] = false;
     doc["ledGruen"] = true;
   }
-  
   doc["poti"] = analogRead(potpin);
   serializeJson(doc, meinJson);
   Serial.println(meinJson);
