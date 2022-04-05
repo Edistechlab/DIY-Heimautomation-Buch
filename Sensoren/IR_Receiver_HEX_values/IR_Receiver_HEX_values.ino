@@ -13,19 +13,18 @@ Required libraries (Tools -> manage libraries)
 */ 
 
 #include <IRremote.h>
-
 const int ReceiverPin = 5; // Pin D1 beim Wemos D1 mini
-IRrecv receiver(ReceiverPin);
-decode_results results;
 
 void setup() {
   Serial.begin(115200);
-  receiver.enableIRIn();
+  IrReceiver.begin(ReceiverPin, DISABLE_LED_FEEDBACK);
+  printActiveIRProtocols(&Serial);
 }
 
 void loop() {
-  if (receiver.decode(&results)) {
-    Serial.println(results.value, HEX);
-    receiver.resume(); 
+  if (IrReceiver.decode()) {
+    IrReceiver.printIRResultShort(&Serial);
+    Serial.println();
+    IrReceiver.resume();
   }
 }
