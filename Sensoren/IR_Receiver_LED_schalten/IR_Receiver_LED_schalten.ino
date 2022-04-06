@@ -19,8 +19,8 @@ Protocol=NEC Address=0xDF00 Command=0x6 Raw-Data=0xF906DF00 32 bits LSB first - 
 
 #include <IRremote.h>
 const int ReceiverPin = 5; // Pin D1 beim Wemos D1 mini
-const int LEDrotPin = 15; // Pin D8 beim Wemos D1 mini
-const int LEDgelbPin = 13; // Pin D7 beim Wemos D1 mini
+const int LEDrotPin = 4; // Pin D2 beim Wemos D1 mini
+const int LEDgelbPin = 2; // Pin D4 beim Wemos D1 mini
 
 void setup() {
   Serial.begin(115200);
