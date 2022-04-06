@@ -1,5 +1,5 @@
 /*
-Project:  IR Daten empfangen und die HEX Werte ausgeben
+Project:  IR Daten empfangen und zwei LEDs schalten
 Author:   Thomas Edlinger for www.edistechlab.com
 Date:     Created 03.04.2022 
 Version:  V1.0
