@@ -12,7 +12,6 @@ Required libraries (Tools -> manage libraries)
  - Irremote by Armin Joachimsmeyer V3.6.1
 */ 
 
-#include <Arduino.h>
 #include <IRremote.hpp>
 
 const int SenderPin = 5; // Pin D1 beim NodeMCU ESP8266
