@@ -1,0 +1,29 @@
+sensor:
+  - platform: ct_clamp
+    sensor: adc_sensor
+    name: "Strommessung"
+    update_interval: 5s      
+    id: measured_current
+    filters:
+      - calibrate_linear:
+          - 0 -> 0
+          - 0.13687 -> 8.37
+    
+  - platform: adc
+    pin: A0
+    id: adc_sensor
+    
+  - platform: total_daily_energy
+    name: "Täglicher Stromverbrauch"
+    power_id: my_power
+
+  - platform: template
+    id: my_power
+    name: "Leistungsmessung"
+    lambda: return id(measured_current).state * 230 / 1000;
+    unit_of_measurement: 'kW'
+    update_interval: 5s
+
+time:
+  - platform: sntp
+    id: my_time
