@@ -7,14 +7,14 @@ CRGB leds[NUM_LEDS];
 
 void setup() {
   FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);
-  FastLED.setBrightness(255);
+  FastLED.setBrightness(50);
 }
 
-void loop() {
-  for(int dot = 0; dot < NUM_LEDS; dot++) { 
-    leds[dot] = CRGB::Blue;
+void loop () {
+  
+    uint16_t beatA = beatsin16(30, 0, 255);
+    uint16_t beatB = beatsin16(20, 0, 255);
+    fill_rainbow(leds, NUM_LEDS, (beatA+beatB)/2, 8);
+    
     FastLED.show();
-    leds[dot] = CRGB::Black;
-    delay(50);
-  }
 }
