@@ -38,20 +38,23 @@ void setup () {
 }
 
 void loop () {
-    DateTime jetzt = rtc.now();
-    Serial.print(jetzt.day(), DEC);
-    Serial.print('.');
-    Serial.print(jetzt.month(), DEC);
-    Serial.print('.');
-    Serial.print(jetzt.year(), DEC);
-    Serial.print(" ");
-    Serial.print(wochentage[jetzt.dayOfTheWeek()]);
-    Serial.print(" ");
-    Serial.print(jetzt.hour(), DEC);
-    Serial.print(':');
-    Serial.print(jetzt.minute(), DEC);
-    Serial.print(':');
-    Serial.print(jetzt.second(), DEC);
-    Serial.println();
-    delay(3000);
+  DateTime jetzt = rtc.now();
+  Serial.print(jetzt.day(), DEC);
+  Serial.print('.');
+  Serial.print(jetzt.month(), DEC);
+  Serial.print('.');
+  Serial.print(jetzt.year(), DEC);
+  Serial.print(" ");
+  Serial.print(wochentage[jetzt.dayOfTheWeek()]);
+  Serial.print(" ");
+  Serial.print(jetzt.hour(), DEC);
+  Serial.print(':');
+  Serial.print(jetzt.minute(), DEC);
+  Serial.print(':');
+  Serial.print(jetzt.second(), DEC);
+  Serial.println();
+  //Formatierung vom Datum und der Zeit
+  char buf1[] = "DD.MMM.YYYY-hh:mm:ss";
+  Serial.println(jetzt.toString(buf1));
+  delay(3000);
 }
