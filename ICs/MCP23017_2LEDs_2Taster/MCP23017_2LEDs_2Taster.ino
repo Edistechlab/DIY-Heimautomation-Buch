@@ -22,10 +22,10 @@ SDA         D2/4
 
 #include <Adafruit_MCP23X17.h>
 
-const uint8_t LED0_Pin = 0;      // GPA0 (21) MCP23017
-const uint8_t LED1_Pin = 1;      // GPA1 (22) MCP23017
-const uint8_t Button0_Pin = 8;   // GPB0 (1) MCP23017
-const uint8_t Button1_Pin = 9;   // GPB1 (2) MCP23017
+const uint8_t Button0_Pin = 0;   // GPA0 (21) MCP23017
+const uint8_t Button1_Pin = 1;   // GPA1 (22) MCP23017
+const uint8_t LED0_Pin = 8;      // GPB0 (1) MCP23017
+const uint8_t LED1_Pin = 9;      // GPB1 (2) MCP23017
 #define MCP23017_I2C_addr0 0x20  // A0=GND, A1=GND, A2=GND 
 
 Adafruit_MCP23X17 mcp0;
