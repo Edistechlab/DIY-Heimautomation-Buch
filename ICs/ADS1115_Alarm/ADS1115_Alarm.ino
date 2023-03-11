@@ -46,9 +46,9 @@ void setup(void) {
 }
 
 void loop(void) {
-  int16_t adc0;
+  int16_t adc1;
   // Komparator wird nur nach einem Lesevorgang zurückgesetzt
-  adc0 = ads.getLastConversionResults();
-  Serial.print("AIN0: "); Serial.println(adc0);
+  adc1 = ads.getLastConversionResults();
+  Serial.print("AIN1: "); Serial.println(adc1);
   delay(100);
 }
