@@ -26,6 +26,7 @@ Adafruit_ADS1115 ads;
 
 void setup(void) {
   Serial.begin(115200);
+  ads.setGain(GAIN_TWOTHIRDS);
   if (!ads.begin(ADS1115_I2C_addr0)) {
     Serial.println("Finde keinen ADS1115");
     while (true);
