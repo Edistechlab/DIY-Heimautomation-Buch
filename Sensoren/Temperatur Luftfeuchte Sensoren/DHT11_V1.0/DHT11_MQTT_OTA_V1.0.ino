@@ -61,7 +61,7 @@ void setup() {
    ArduinoOTA.setHostname(ESPHostname);
   // ArduinoOTA.setPassword("admin");
   ArduinoOTA.begin();
-  
+  dht.begin();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
 }
