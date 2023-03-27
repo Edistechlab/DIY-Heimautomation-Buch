@@ -1,0 +1,9 @@
+mqtt:
+ sensor:
+  - state_topic: BodenfeuchteProzent
+    name: "Bodenfeuchte in %"
+    unit_of_measurement: "%"
+  - state_topic: Bodenfeuchte
+    name: "Bodenfeuchte"
+  - state_topic: Pumpe
+    name: "Pumpen Status”
