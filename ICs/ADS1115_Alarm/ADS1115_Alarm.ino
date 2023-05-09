@@ -50,5 +50,6 @@ void loop(void) {
   // Komparator wird nur nach einem Lesevorgang zurückgesetzt
   adc1 = ads.getLastConversionResults();
   Serial.print("AIN1: "); Serial.println(adc1);
+  if (adc1<=10666) {digitalWrite(LEDPin, LOW);}
   delay(100);
 }
