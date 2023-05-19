@@ -14,7 +14,7 @@ void loop() {
     Serial.println("Taster ist schon über 1 Sek. gedrückt! ");
   }
   if ( button.rose() ) {
-    Serial.print("Der Taster wurde so viele Mili Sek. gedrückt: ");
+    Serial.print("Der Taster wurde so viele Millisek. gedrückt: ");
     Serial.println(button.previousDuration());
   }
 }
