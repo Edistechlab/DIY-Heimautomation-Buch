@@ -57,6 +57,7 @@ int value = 0;
 
 void setup() {
   Serial.begin(115200);
+  dht.begin();
   setup_wifi();
    ArduinoOTA.setHostname(ESPHostname);
   // ArduinoOTA.setPassword("admin");
