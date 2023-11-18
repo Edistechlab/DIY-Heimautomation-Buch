@@ -14,10 +14,10 @@ Required libraries (sketch -> include library -> manage libraries)
 
 #include <Bounce2.h> 
 
-const byte buttonPinSAVE = 6;
-const byte buttonPinDOWN = 7;
-const byte buttonPinUP = 8;
-const byte CS_Pin = 9;
+const byte CS_Pin = 6;
+const byte buttonPinSAVE = 7;
+const byte buttonPinDOWN = 8;
+const byte buttonPinUP = 9;
 const byte UD_Pin = 10;
 const byte INC_Pin = 11;
 const byte debounceInterval = 10; // Zeit in (ms) für depounce
