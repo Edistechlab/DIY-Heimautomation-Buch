@@ -20,6 +20,7 @@ const byte maxPotiSteps = 128;  // 0 - 128 or 0 - 255 Steps
 byte address = 0x00;
 
 void setup() {
+  Serial.begin(115200);
   pinMode (CSPin, OUTPUT);
   pinMode (analogInPin, INPUT);
   SPI.begin();
