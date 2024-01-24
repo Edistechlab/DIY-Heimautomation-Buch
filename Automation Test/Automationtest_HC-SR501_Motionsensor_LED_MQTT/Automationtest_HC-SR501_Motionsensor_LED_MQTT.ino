@@ -1,30 +1,34 @@
 /*
-Project:  PIR Motion dedector HC-SR501 and LED with MQTT und OTA update
+Project:  PIR Motion dedector HC-SR501 and LED with MQTT and OTA update
 Author:   Thomas Edlinger for www.edistechlab.com
-Date:     Created 20.09.2021 
-Version:  V1.0
-IDE:      Arduino IDE 1.8.15
- 
+Date:     Created 20.09.2021 / Update 24.01.2024
+Version:  V1.1
+IDE:      Arduino IDE 2.1.1
+ 
 Required Board (Tools -> Board -> Boards Manager...)
- - Board: esp8266 by ESP8266 Community   V3.0.2  
+ - Board: esp8266 by ESP8266 Community   V3.1.2  
 
 Required libraries (sketch -> include library -> manage libraries)
  - PubSubClient by Nick ‘O Leary V2.8.0
- - ArduinoOTA by Juraj Andrassy V1.0.7
+ - ArduinoOTA by Juraj Andrassy V1.1.0
 */
 
 #include <PubSubClient.h>
 #include <ArduinoOTA.h>
 //#include <WiFi.h>  // ESP32 only
 
-#define wifi_ssid "Your_SSID"
-#define wifi_password "Your_Password"
-#define mqtt_server "MQTT_Server_IP"
-#define mqtt_user "MQTT_username"         
-#define mqtt_password "MQTT_PW"
-#define ESPHostname "Autom_test"
-String clientId = "Autom_test-"; 
+// Wi-Fi Settings
+const char *wifi_ssid = "Your_SSID";
+const char *wifi_password = "Your_Password";
 
+// MQTT Settings
+const char *mqtt_broker = "MQTT_broker_IP";  // homeassistant.local
+const char *mqtt_user = "MQTT_username";
+const char *mqtt_password = "MQTT_PW";
+const char *ESPHostname = "Autom_test";
+const int mqtt_port = 1883;
+
+// define Topics
 #define motion_topic "motionsensor" 
 #define led_topic "LED"
 #define ledStatus_topic "LED_Status"
@@ -34,16 +38,16 @@ PubSubClient client(espClient);
 
 const int motionPin = 4;
 const int ledPin = 5;
-int pirState = LOW;
+byte pirState = LOW;
  
 void setup() {
   Serial.begin(115200);
   setup_wifi();
   ArduinoOTA.setHostname(ESPHostname);
-  // ArduinoOTA.setPassword("admin");
+  ArduinoOTA.setPassword("admin");
   ArduinoOTA.begin();
    
-  client.setServer(mqtt_server, 1883); 
+  client.setServer(mqtt_broker, mqtt_port); 
   client.setCallback(callback); 
   pinMode(motionPin, INPUT); 
   pinMode(ledPin, OUTPUT);    
@@ -88,16 +92,12 @@ void setup_wifi() {
   Serial.println(WiFi.localIP());
 }  
 
-void callback(char* topic, byte* message, unsigned int length) {
-  Serial.print("Message arrived on topic: ");
-  Serial.print(topic);
-  Serial.print(". Message: ");
+void callback(char *topic, byte *payload, unsigned int length) {
   String messageTemp;
+  
   for (int i = 0; i < length; i++) {
-    Serial.print((char)message[i]);
-    messageTemp += (char)message[i];
+    messageTemp += (char)payload[i];
   }
-  Serial.println();
   
   if (String(topic) == led_topic) {
     if(messageTemp == "ON"){
@@ -115,14 +115,14 @@ void callback(char* topic, byte* message, unsigned int length) {
   }
 }
       
- void reconnect() {
+void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
-    // Create a random client ID
-    clientId += String(random(0xffff), HEX);
+    String client_id = "ESP-";
+    client_id += String(WiFi.macAddress());
     // Attempt to connect
-    if (client.connect(clientId.c_str(), mqtt_user, mqtt_password)) {
+    if (client.connect(client_id.c_str(), mqtt_user, mqtt_password)) {
       Serial.println("connected");
       // Once connected, publish an announcement...
       client.publish(motion_topic, ESPHostname);
