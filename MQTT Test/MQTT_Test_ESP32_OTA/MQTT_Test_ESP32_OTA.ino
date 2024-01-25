@@ -75,7 +75,7 @@ void loop() {
     } else {
       client.publish(btnTopicEsp32, "ON");
       Serial.print("Changing Button to ON\n");
-    }
+      }
     delay(100);
   }
   lastButtonState = buttonState;
@@ -126,7 +126,7 @@ void callback(char* topic, byte* message, unsigned int length) {
   }
 }
       
- void reconnect() {
+void reconnect() {
   // Loop until we're reconnected
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
@@ -146,5 +146,6 @@ void callback(char* topic, byte* message, unsigned int length) {
         // Wait 5 seconds before retrying
         delay(5000);
       }
-   }
+    
+  }
 }
