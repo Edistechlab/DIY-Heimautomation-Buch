@@ -17,9 +17,6 @@ Required libraries (sketch -> include library -> manage libraries)
 
 const byte LEDPin = 2; //D2
 
-byte address = 0x00;
-String incomingString;
-
 // Define data structure
 typedef struct struct_message {
   byte a;
