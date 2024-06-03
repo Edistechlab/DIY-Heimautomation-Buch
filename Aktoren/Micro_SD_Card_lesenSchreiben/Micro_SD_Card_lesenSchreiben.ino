@@ -20,6 +20,7 @@ const uint8_t chipSelect = 2;
 
 void setup() {
   Serial.begin(115200);
+  delay(500);
   if (!SD.begin(chipSelect)) {
     Serial.println("Karte konnte nicht gefunden werden!");
     return;
