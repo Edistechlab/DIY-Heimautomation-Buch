@@ -43,6 +43,13 @@ void setup() {
     request->send(SD, "/index.html", "text/html");
   });
   webServer.serveStatic("/", SD, "/");
+
+   // Button Coctail1 received
+  webServer.on("/coctail1", HTTP_GET, [](AsyncWebServerRequest *request) {
+    Serial.println("Nachricht Coctail 1 !");
+    request->send(SD, "/index.html", "text/html");
+  });
+
   webServer.begin();
 }
 
