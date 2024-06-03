@@ -41,8 +41,8 @@ void setup() {
   dataFile = SD.open("textfile.txt", FILE_READ);
   if (dataFile) {
     while (dataFile.available()) {
-      char ch = dataFile.read(); // read characters one by one from Micro SD Card
-      Serial.print(ch); // print the character to Serial Monitor
+      char ch = dataFile.read();
+      Serial.print(ch);
     }
     dataFile.close();
   } else {
