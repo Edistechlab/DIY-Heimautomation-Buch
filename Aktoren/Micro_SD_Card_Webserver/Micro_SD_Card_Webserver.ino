@@ -3,7 +3,7 @@ Project:  Micro-SD Card Module - ESP32 Webserver
 Author:   Thomas Edlinger for www.edistechlab.com
 Date:     Created 02.06.2024
 Version:  V1.0
-IDE:      Arduino IDE 2.3.
+IDE:      Arduino IDE 2.3.2
 Board:    Arduino Nano ESP32
 Pins:     CS=D10 / MOSI=D11 / MISO=D12 / SCL=D13 - Arduino Pins
  
@@ -45,8 +45,8 @@ void setup() {
   webServer.serveStatic("/", SD, "/");
 
    // Button Coctail1 received
-  webServer.on("/coctail1", HTTP_GET, [](AsyncWebServerRequest *request) {
-    Serial.println("Nachricht Coctail 1 !");
+  webServer.on("/cocktail1", HTTP_GET, [](AsyncWebServerRequest *request) {
+    Serial.println("Nachricht Cocktail 1 !");
     request->send(SD, "/index.html", "text/html");
   });
 
