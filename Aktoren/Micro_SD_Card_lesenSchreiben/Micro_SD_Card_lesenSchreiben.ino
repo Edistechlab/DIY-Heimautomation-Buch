@@ -26,7 +26,7 @@ void setup() {
     return;
   }
 
-  SD.remove("textfile.txt"); // löscht die Datai wenn sie vorhanden ist
+  SD.remove("textfile.txt"); // löscht die Datei wenn sie vorhanden ist
 
   //Das File öffnen zum beschreiben
   File dataFile = SD.open("textfile.txt", FILE_WRITE);
