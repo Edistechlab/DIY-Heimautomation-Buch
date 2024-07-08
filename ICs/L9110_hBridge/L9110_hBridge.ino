@@ -34,4 +34,7 @@ void loop() {
   digitalWrite(Motor_IA,HIGH);
   digitalWrite(Motor_IB,LOW);
   delay(2000);
+  digitalWrite(Motor_IA,HIGH);
+  analogWrite(Motor_IB,speed);
+  delay(2000);
 }
