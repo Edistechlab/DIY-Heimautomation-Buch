@@ -24,7 +24,7 @@ void setup() {
   Serial.begin(115200);
   
   // Define pin modes
-  pinMode(echoPin, INPUT_PULLUP); // Enable internal pull-up resistor
+  pinMode(echoPin, INPUT);
   pinMode(trigPin, OUTPUT);
 }
 
