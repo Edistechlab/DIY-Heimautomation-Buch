@@ -1,5 +1,5 @@
 /*
-Project:  KY-040 Rotary Encoder with Wemos d1 mini ligh
+Project:  KY-040 Rotary Encoder with Wemos d1 mini light
 Author:   Thomas Edlinger for www.edistechlab.com
 Date:     Created 22.11.2024
 Version:  V1.0 
