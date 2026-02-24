@@ -1,0 +1,81 @@
+type: vertical-stack
+title: Gasflasche Waage
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: button
+        entity: binary_sensor.gas_bottle_present
+        name: Gasflasche
+        icon: mdi:gas-cylinder
+        show_state: true
+        show_name: true
+        tap_action:
+          action: none
+        state_color: true
+        styles:
+          icon:
+            - width: 64px
+            - height: 64px
+          name:
+            - font-size: 14px
+            - padding-top: 8px
+      - type: button
+        name: Neu tarieren
+        icon: mdi:scale-balance
+        tap_action:
+          action: call-service
+          service: button.press
+          target:
+            entity: button.gas_bottle_scale_tare
+        show_state: false
+        show_name: true
+        state_color: true
+        styles:
+          icon:
+            - width: 64px
+            - height: 64px
+          name:
+            - font-size: 14px
+            - padding-top: 8px
+      - type: button
+        name: Kalibrieren (1kg)
+        icon: mdi:tune
+        tap_action:
+          action: call-service
+          service: button.press
+          target:
+            entity: button.gas_bottle_scale_calibrate
+        show_state: false
+        show_name: true
+        state_color: true
+        styles:
+          icon:
+            - width: 64px
+            - height: 64px
+          name:
+            - font-size: 14px
+            - padding-top: 8px
+  - type: gauge
+    entity: sensor.gas_bottle_fill_level
+    name: Füllstand Gasflasche
+    unit: "%"
+    min: 0
+    max: 100
+    needle: true
+    severity:
+      green: 30
+      yellow: 10
+      red: 0
+  - type: sensor
+    entity: sensor.gas_bottle_weight
+    name: Aktuelles Gewicht
+    icon: mdi:weight-kilogram
+    graph: none
+  - type: entities
+    title: System Status
+    state_color: true
+    entities:
+      - entity: sensor.gas_bottle_info
+        name: Status / Info
+        icon: mdi:information-outline
+        secondary_info: last-changed
