@@ -1,0 +1,52 @@
+mqtt:
+  sensor:
+    - name: "Gas Bottle Weight"
+      unique_id: gasbottle_weight_kg
+      state_topic: "gasbottle/weight"
+      unit_of_measurement: "kg"
+      device_class: weight
+      state_class: measurement
+      icon: mdi:weight-kilogram
+      value_template: "{{ value | float(0) | round(2) }}"
+
+    - name: "Gas Bottle Fill Level"
+      unique_id: gasbottle_fill_level
+      state_topic: "gasbottle/fill_level"
+      unit_of_measurement: "%"
+      state_class: measurement
+      icon: mdi:gas-cylinder
+      value_template: "{{ value | float(0) | int }}"
+
+    - name: "Gas Bottle Info"
+      unique_id: gasbottle_info
+      state_topic: "gasbottle/info"
+      icon: mdi:information-outline
+
+  binary_sensor:
+    - name: "Gas Bottle Present"
+      unique_id: gasbottle_present
+      state_topic: "gasbottle/status"
+      payload_on: "BOTTLE"
+      payload_off: "NO_BOTTLE"
+      device_class: occupancy
+
+  button:
+    - name: "Gas Bottle Scale Tare"
+      unique_id: gasbottle_scale_tare
+      command_topic: "gasbottle/command"
+      payload_press: "TARE"
+      retain: false
+      icon: mdi:scale-balance
+      availability_topic: "gasbottle/availability"
+      payload_available: "online"
+      payload_not_available: "offline"
+
+    - name: "Gas Bottle Scale Calibrate"
+      unique_id: gasbottle_scale_calibrate
+      command_topic: "gasbottle/command"
+      payload_press: "CALIBRATE"
+      retain: false
+      icon: mdi:tune
+      availability_topic: "gasbottle/availability"
+      payload_available: "online"
+      payload_not_available: "offline"
