@@ -24,9 +24,10 @@ cards:
         icon: mdi:scale-balance
         tap_action:
           action: call-service
-          service: button.press
-          target:
-            entity: button.gas_bottle_scale_tare
+          service: mqtt.publish
+          service_data:
+            topic: gasbottle/command
+            payload: TARE
         show_state: false
         show_name: true
         state_color: true
@@ -42,9 +43,10 @@ cards:
         icon: mdi:tune
         tap_action:
           action: call-service
-          service: button.press
-          target:
-            entity: button.gas_bottle_scale_calibrate
+          service: mqtt.publish
+          service_data:
+            topic: gasbottle/command
+            payload: CALIBRATE
         show_state: false
         show_name: true
         state_color: true
